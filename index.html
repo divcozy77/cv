@@ -49,6 +49,21 @@
     ul {
       padding-left: 1.2rem;
     }
+
+    #cv-content {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 20mm;
+      margin: auto;
+      background: white;
+      color: #000;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+  
+    .page-break {
+      page-break-before: always;
+    }
   </style>
 </head>
 <body>
@@ -196,15 +211,24 @@ mapping.<br>
     function downloadCV() {
       const element = document.getElementById('cv-content');
     
-      const options = {
-        margin:       0.5,
-        filename:     'DavidJR_Osita_CV.pdf',
+      const opt = {
+        margin:       0,
+        filename:     'John_Doe_CV.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2 },
-        jsPDF:        { unit: 'in', format: 'legal', orientation: 'portrait' }
+        html2canvas:  {
+          scale: 2,
+          useCORS: true, // If you load fonts/images from external URLs
+          scrollY: 0     // Prevent scroll offset rendering bugs
+        },
+        jsPDF: {
+          unit: 'mm',
+          format: 'a4',
+          orientation: 'portrait'
+        },
+        pagebreak: { mode: ['css', 'legacy'] } // Respect .page-break classes
       };
     
-      html2pdf().set(options).from(element).save();
+      html2pdf().set(opt).from(element).save();
     }
   </script>
 </body>
