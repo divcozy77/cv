@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Jr. Osita | Senior .NET Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      /* font-size: small; */
+      background-color: #f8f9fa;
+    }
+    
+    body, html {
+      margin: 0;
+      padding: 0;
+      background: #eee;
+    }
+
+    .section-title {
+      border-bottom: 2px solid #1f2d3d;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #1f2d3d;
+    }
+    .progress {
+      height: 5px;
+      background-color: #ced4da;
+    }
+    .progress-bar {
+      background-color: #1f2d3d;
+    }
+    .contact-icon {
+      margin-right: 8px;
+    }
+    
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    #cv-content {
+      width: 210mm;
+      margin: auto;
+      background: #fff;
+    }
+
+    .page-section {
+      display: flex;
+      flex-direction: row;
+      height: calc(297mm - 40mm); /* 297mm A4 - 2x 20mm padding */
+      padding: 20mm;
+      box-sizing: border-box;
+      page-break-after: always;
+      overflow: hidden;
+      background: white;
+    }
+
+    .sidebar {
+      width: 40%;
+      padding: 5mm;
+      background: #1c2b3a;
+      color: white;
+    }
+
+    .sidebar h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      margin-left: 10mm;
+      width: 60%;
+      color: #000;
+    }
+
+    .content h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #333;
+      padding-bottom: 4px;
+    }
+
+    .footer-note {
+      position: absolute;
+      bottom: 10mm;
+      right: 20mm;
+      font-size: 12px;
+      color: #999;
+    }
+
+    /* Optional fixed height for visual layout debugging */
+    .sidebar, .content {
+      min-height: 100%;
+    }
+  
+    .content-full {
+      width: 100%;
+      color: #000;
+      padding-left: 5mm;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    #downloadBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    @media print {
+      #downloadBtn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="cv-content">
+    <div class="page-section">
+      <div class="sidebar">
+        <h2 class="mb-3">David Jr. Osita</h2>
+        <h5 class="mb-4">Senior .NET Developer</h5>
+        <br> 
+        
+        <div class="mb-4">
+          <h6 class="text-uppercase">Contact Me</h6>
+          <p><span class="contact-icon">📞</span>+63 961 966 2989</p>
+          <p><span class="contact-icon">🌐</span><a href="https://divcozy77.github.io/portfolio" target="_blank">Github Portfolios</a></p>
+          <p><span class="contact-icon">🌐</span><a href="https://www.linkedin.com/in/dojsys/" target="_blank">LinkedIN</a></p>
+          <p><span class="contact-icon">✉️</span>divcozy@gmail.com</p>
+          <p><span class="contact-icon">📍</span>Digos City, Philippines</p>
+        </div>
+        
+        <div class="mb-4 mt-5">
+          <h6 class="text-uppercase">Professional Skills</h6>
+          <p>.NET Core & C#</p><div class="progress"><div class="progress-bar" style="width: 95%"></div></div>
+          <p>Blazor / ASP.NET</p><div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+          <p>Angular / React</p><div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+          <p>Azure / DevOps</p><div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+          <p>System Architecture</p><div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+      </div>
+       
+      <div class="content">
+        <div class="mb-4">
+          <h4 class="section-title">Profile Summary</h6>
+          <p>Dynamic Senior .NET Developer with over 25 years of experience in delivering scalable, 
+  enterprise-grade web and mobile applications. <br><br>
+  
+  Expertise in .NET Core, Blazor, and Azure architectures, along with a strong proficiency in Angular and React, enables 
+  the creation of innovative solutions that meet complex business needs. <br><br>
+  
+  A passion for modernizing legacy systems and driving cloud migration initiatives complements 
+  a proven ability to lead Agile teams and mentor emerging talent.  <br><br>
+  
+  Committed to implementing clean architecture principles and leveraging GIS technologies to enhance 
+  application functionality and user experience.
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="page-section">
+      <div class="content-full">
+        <div class="mb-4">
+          <h4 class="section-title">Work Experience</h4>
+          <p><strong>TECHNICAL CONSULTANT at LGU Digos City</strong> / Jan 2020 - Dec 2024<br>
+            - Architected and deployed GIS-enabled platforms for urban planning and infrastructure 
+  mapping.<br>
+            - Led modernization of IT infrastructure, achieving 99.99% uptime.<br>
+            - Designed RESTful APIs supporting PMS, DMS, GAD, and mobile systems.<br>
+            - Spearheaded cloud migration and deployed MFA and encryption strategies.
+          </p>
+          <p><strong>DOJSYS Technologies</strong> / Jan 2015 - Dec 2019<br>
+            - Delivered SaaS solutions for financial monitoring and document tracking.<br>
+            - Managed projects from architecture to deployment using ASP.NET and Angular.<br>
+            - Deployed CI/CD pipelines for faster delivery cycles.
+          </p>
+          <p><strong>Senior Developer at Hyper-IT Services LLC, Sugar Grove, USA</strong> / Oct 2012 - Sep 2014<br>
+            - Designed cloud-ready software across platforms with logging and monitoring.<br>
+            - Improved performance through database optimization and secure design.<br>
+          </p>
+          <p><strong>Senior Lead Developer at Cased-Dimensions, Phils. (Microsoft Partner), Davao City</strong> / Apr 2011 - Sep 2012<br>
+            - Led Microsoft System Center enhancement projects.<br>
+            - Mentored junior developers and aligned features with ITIL processes.
+          </p>
+          <p><strong>Database Developer at Growth Equity in Mindanao (USAID), Davao City</strong> / April 2009 — March 2011<br>
+            - Built MIS platforms for program monitoring and reporting.
+          </p>
+        </div>
+
+        <div class="mb-4 mt-5">
+          <h4 class="section-title">Personal Skills</h4>
+          <ul>
+            <li>Creative Problem Solving</li>
+            <li>Team Leadership</li>
+            <li>Agile Methodologies</li>
+            <li>Continuous Learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+     <div class="page-section">
+      <div class="content-full">
+          <div class="mb-4">
+            <h4 class="section-title">Proficiency</h4>
+            <p><strong>Backend Development:</strong><br>
+              Languages: Node.js, C#, Ruby<br>
+              Frameworks: Express.js, ASP.NET Core<br>
+              API Design: Minimal API, RESTful APIs, GraphQL, gRPC<br>
+              Authentication: OAuth2, JWT, Passport.js, IdentityServer
+            </p><div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+            <p><strong>Frontend Development:</strong><br>
+              Languages: HTML5, CSS3, JavaScript (ES6+), TypeScript<br>
+              Frameworks/Libraries: React.js, Angular 20, Blazor 9, AlpineJS<br>
+              UI Frameworks: Bootstrap 5, Tailwind CSS, Material Design
+              Build Tools: Webpack, Vite, Gulp<br>
+            </p><div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+            <p><strong>Full-Stack Development:</strong><br>
+               MERN Stack (MongoDB, Express, React, Node)<br>
+               MEAN Stack (MongoDB, Express, Angular, Node)<br>
+               .NET Stack (C#, ASP.NET Core, MSSQL)
+            </p><div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+            <p><strong>Database:</strong><br>
+               Relational: MySQL, PostgreSQL, SQL Server, SQLite<br>
+               NoSQL: MongoDB, Redis<br>
+               ORMs: Sequelize, TypeORM, Prisma, Entity Framework, Hibernate
+            </p><div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+            <p><strong>DevOps & CI/CD:</strong><br>
+              Docker, Kubernetes, Jenkins, GitHub Actions, GitLab CI/CD<br>
+              Nginx, Apache, Azure, GCP<br>
+              Terraform, Ansible, Helm<br>
+              Monitoring: Prometheus, Grafana, ELK Stack
+            </p><div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+            <p><strong>Version Control & Collaboration:</strong><br>
+              Git, GitHub, GitLab, Bitbucket<br>
+              Agile/Scrum Methodologies<br>
+              JIRA<br>
+            </p><div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+          </div>
+      </div>
+    </div>
+
+    <div class="page-section">
+      <div class="content-full">
+        <div class="mb-4">
+          <h4 class="section-title">Education</h4>
+          <p><strong>Diploma of Applied Science in Information Technology</strong><br> 
+              Major in Computer System Design & Programming <br> 
+              AMA Computer Education System, Davao Campus, Davao City<br> 
+            June 1997 — April 2000<br> 
+            Graduated with Honors, Best Programmer of the Year
+          </p>
+          <p><strong>Bachelor of Science in Computer Science (Undergraduate)</strong><br> 
+            South Philippine Adventist College, Davao del Sur<br> 
+            June 1995 — March 1997
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div>
+    <button id="downloadBtn" class="no-print" onclick="downloadCV()">Download as PDF</button>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadCV() {
+      const element = document.getElementById('cv-content');
+      const clonedElement = element.cloneNode(true);
+    
+      // Optional: append to an invisible container so it's part of layout flow
+      const hiddenContainer = document.createElement('div');
+      hiddenContainer.style.position = 'absolute';
+      hiddenContainer.style.left = '-9999px';
+      hiddenContainer.appendChild(clonedElement);
+      document.body.appendChild(hiddenContainer);
+    
+      const opt = {
+        margin: 0,
+        filename: 'David_JR_Osita_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['css', 'legacy'] }
+      };
+    
+      html2pdf().set(opt).from(clonedElement).save().then(() => {
+        document.body.removeChild(hiddenContainer); // Clean up
+      });
+    }
+  </script>
+</body>
+</html>
