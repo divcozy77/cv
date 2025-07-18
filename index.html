@@ -187,7 +187,10 @@ mapping.<br>
     </div>
   </div>
 
-  <button onclick="downloadCV()">Download PDF</button>
+  <div class="container mb-2 mt-1">
+    <button onclick="downloadCV()">Download PDF</button>
+  </div>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     function downloadCV() {
@@ -198,7 +201,7 @@ mapping.<br>
         filename:     'DavidJR_Osita_CV.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2 },
-        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        jsPDF:        { unit: 'in', format: 'legal', orientation: 'portrait' }
       };
     
       html2pdf().set(options).from(element).save();
