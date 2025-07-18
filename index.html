@@ -52,7 +52,7 @@
   </style>
 </head>
 <body>
-  <div class="resume-wrapper d-flex">
+  <div class="resume-wrapper d-flex" id="cv-content">
     <div class="resume-left">
       <h2 class="mb-3">David Jr. Osita</h2>
       <h5 class="mb-4">Senior .NET Developer</h5>
@@ -186,5 +186,23 @@ mapping.<br>
       </div>
     </div>
   </div>
+
+  <button onclick="downloadCV()">Download PDF</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadCV() {
+      const element = document.getElementById('cv-content');
+    
+      const options = {
+        margin:       0.5,
+        filename:     'DavidJR_Osita_CV.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+    
+      html2pdf().set(options).from(element).save();
+    }
+  </script>
 </body>
 </html>
