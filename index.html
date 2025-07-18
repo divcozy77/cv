@@ -104,6 +104,26 @@
     .page-break {
       page-break-before: always;
     }
+
+    #downloadBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    @media print {
+      #downloadBtn {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -117,7 +137,8 @@
         <div class="mb-4">
           <h6 class="text-uppercase">Contact Me</h6>
           <p><span class="contact-icon">📞</span>+63 961 966 2989</p>
-          <p><span class="contact-icon">🌐</span>https://divcozy77.github.io/portfolio</p>
+          <p><span class="contact-icon">🌐</span><a href="https://divcozy77.github.io/portfolio">Github Portfolios</a></p>
+          <p><span class="contact-icon">🌐</span><a href="https://www.linkedin.com/in/dojsys/">LinkedIN</a></p>
           <p><span class="contact-icon">✉️</span>divcozy@gmail.com</p>
           <p><span class="contact-icon">📍</span>Digos City, Philippines</p>
         </div>
@@ -255,8 +276,8 @@
 
   </div>
 
-  <div class="d-flex justify-content-center align-items-center" style="height: 20vh; mb-2 mt-1">
-    <button class="btn btn-primary center" onclick="downloadCV()">Download PDF</button>
+  <div>
+    <button id="downloadBtn" class="no-print" onclick="downloadCV()">Download as PDF</button>
   </div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
