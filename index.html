@@ -202,33 +202,36 @@ mapping.<br>
     </div>
   </div>
 
-  <div class="container mb-2 mt-1">
-    <button class="btn btn-primary" onclick="downloadCV()">Download PDF</button>
+  <div class="d-flex justify-content-center align-items-center" style="height: 100vh; mb-2 mt-1">
+    <button class="btn btn-primary center" onclick="downloadCV()">Download PDF</button>
   </div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     function downloadCV() {
       const element = document.getElementById('cv-content');
+
+      // Create a deep clone of the content (includes all child nodes)
+      const clonedElement = element.cloneNode(true);
     
       const opt = {
         margin:       0,
-        filename:     'John_Doe_CV.pdf',
+        filename:     'DavidJR_Osita_CV.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  {
           scale: 2,
-          useCORS: true, // If you load fonts/images from external URLs
-          scrollY: 0     // Prevent scroll offset rendering bugs
+          useCORS: true,
+          scrollY: 0
         },
         jsPDF: {
           unit: 'mm',
           format: 'a4',
           orientation: 'portrait'
         },
-        pagebreak: { mode: ['css', 'legacy'] } // Respect .page-break classes
+        pagebreak: { mode: ['css', 'legacy'] }
       };
     
-      html2pdf().set(opt).from(element).save();
+      html2pdf().set(opt).from(clonedElement).save();
     }
   </script>
 </body>
