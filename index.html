@@ -8,8 +8,10 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
+      /* font-size: small; */
       background-color: #f8f9fa;
     }
+
     .resume-wrapper {
       max-width: 960px;
       margin: 2rem auto;
@@ -17,17 +19,7 @@
       display: flex;
       border: 1px solid #dee2e6;
     }
-    .resume-left, .resume-right {
-      padding: 2rem;
-    }
-    .resume-left {
-      width: 35%;
-      background-color: #1f2d3d;
-      color: white;
-    }
-    .resume-right {
-      width: 65%;
-    }
+
     .section-title {
       border-bottom: 2px solid #1f2d3d;
       margin-bottom: 1rem;
@@ -51,52 +43,43 @@
       padding-left: 1.2rem;
     }
 
-    .page {
+    #cv-content {
+      width: 210mm;
+      box-sizing: border-box;
+      background: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .page-section {
       display: flex;
       flex-direction: row;
-      width: 210mm;
       height: 297mm;
       padding: 20mm;
       box-sizing: border-box;
       page-break-after: always;
+      position: relative;
+      overflow: hidden;
       background: white;
     }
-    
+
     .sidebar {
-      width: 30%;
-      padding-right: 10mm;
+      width: 50%;
+      padding: 5mm;
       background: #1c2b3a;
       color: white;
     }
-    
+
     .content {
-      width: 70%;
+      width: 50%;
       color: #000;
-    }
-    
-    .page-section {
-      padding-top: 10mm;  /* top margin */
-      padding-bottom: 10mm; /* footer margin same as top */
-      box-sizing: border-box;
-      page-break-inside: avoid;
-      page-break-after: always;
-    }
-    
-    .page-section:last-child {
-      page-break-after: auto; /* avoid blank page after the last section */
-    }
-    
-    #cv-content {
-      width: 210mm;
-      min-height: 297mm;
-      padding: 20mm;
-      margin: auto;
-      background: white;
-      color: #000;
-      font-family: Arial, sans-serif;
-      box-sizing: border-box;
+      padding-left: 5mm;
     }
   
+    .content-full {
+      width: 100%;
+      color: #000;
+      padding-left: 5mm;
+    }
     .page-break {
       page-break-before: always;
     }
@@ -104,14 +87,33 @@
 </head>
 <body>
   <div id="cv-content">
-    <div class="page">
+    <div class="page-section">
       <div class="sidebar">
         <h2 class="mb-3">David Jr. Osita</h2>
         <h5 class="mb-4">Senior .NET Developer</h5>
         <br> 
         
         <div class="mb-4">
-          <h6 class="text-uppercase">Profile</h6>
+          <h6 class="text-uppercase">Contact Me</h6>
+          <p><span class="contact-icon">📞</span>+63 961 966 2989</p>
+          <p><span class="contact-icon">🌐</span>https://divcozy77.github.io/portfolio</p>
+          <p><span class="contact-icon">✉️</span>divcozy@gmail.com</p>
+          <p><span class="contact-icon">📍</span>Digos City, Philippines</p>
+        </div>
+        
+        <div class="mb-4 mt-5">
+          <h6 class="text-uppercase">Professional Skills</h6>
+          <p>.NET Core & C#</p><div class="progress"><div class="progress-bar" style="width: 95%"></div></div>
+          <p>Blazor / ASP.NET</p><div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+          <p>Angular / React</p><div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+          <p>Azure / DevOps</p><div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+          <p>System Architecture</p><div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+      </div>
+       
+      <div class="content">
+        <div class="mb-4">
+          <h4 class="section-title">Profile</h6>
           <p>Dynamic Senior .NET Developer with over 25 years of experience in delivering scalable, 
   enterprise-grade web and mobile applications. <br><br>
   
@@ -125,20 +127,13 @@
   application functionality and user experience.
           </p>
         </div>
-        <br>
-  
-        <div class="mb-4">
-          <h6 class="text-uppercase">Contact Me</h6>
-          <p><span class="contact-icon">📞</span>+63 961 966 2989</p>
-          <p><span class="contact-icon">🌐</span>divcozy77.github.io/portfolio</p>
-          <p><span class="contact-icon">✉️</span>divcozy@gmail.com</p>
-          <p><span class="contact-icon">📍</span>Digos City, Philippines</p>
-        </div>
-        <br>
-  
+
+
       </div>
-       
-      <div class="content">
+    </div>
+
+    <div class="page-section">
+      <div class="content-full">
         <div class="mb-4">
           <h4 class="section-title">Work Experience</h4>
           <p><strong>TECHNICAL CONSULTANT at LGU Digos City</strong> / Jan 2020 - Dec 2024<br>
@@ -168,29 +163,8 @@
       </div>
     </div>
 
-     <div class="page">
-      <div class="sidebar">
-        <div class="mb-4">
-          <h6 class="text-uppercase">Professional Skills</h6>
-          <p>.NET Core & C#</p><div class="progress"><div class="progress-bar" style="width: 95%"></div></div>
-          <p>Blazor / ASP.NET</p><div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
-          <p>Angular / React</p><div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
-          <p>Azure / DevOps</p><div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
-          <p>System Architecture</p><div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
-        </div>
-      </div>
-       
-      <div class="content">
-          <div class="mb-4">
-            <h4 class="section-title">Personal Skills</h4>
-            <ul>
-              <li>Creative Problem Solving</li>
-              <li>Team Leadership</li>
-              <li>Agile Methodologies</li>
-              <li>Continuous Learning</li>
-            </ul>
-          </div>
-    
+     <div class="page-section">
+      <div class="content-full">
           <div class="mb-4">
             <h4 class="section-title">Proficiency</h4>
             <p><strong>Backend Development:</strong><br>
@@ -227,22 +201,33 @@
               JIRA<br>
             </p><div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
           </div>
+      </div>
+    </div>
 
-          
-          <div class="mb-4">
-            <h4 class="section-title">Education</h4>
-            <p><strong>Diploma of Applied Science in Information Technology</strong><br> 
-               Major in Computer System Design & Programming <br> 
-               AMA Computer Education System, Davao Campus, Davao City<br> 
-              June 1997 — April 2000<br> 
-              Graduated with Honors, Best Programmer of the Year
-            </p>
-            <p><strong>Bachelor of Science in Computer Science (Undergraduate)</strong><br> 
-              South Philippine Adventist College, Davao del Sur<br> 
-               June 1995 — March 1997
-            </p>
-          </div>
-
+    <div class="page-section">
+      <div class="content-full">
+        <div class="mb-4">
+          <h4 class="section-title">Personal Skills</h4>
+          <ul>
+            <li>Creative Problem Solving</li>
+            <li>Team Leadership</li>
+            <li>Agile Methodologies</li>
+            <li>Continuous Learning</li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <h4 class="section-title">Education</h4>
+          <p><strong>Diploma of Applied Science in Information Technology</strong><br> 
+              Major in Computer System Design & Programming <br> 
+              AMA Computer Education System, Davao Campus, Davao City<br> 
+            June 1997 — April 2000<br> 
+            Graduated with Honors, Best Programmer of the Year
+          </p>
+          <p><strong>Bachelor of Science in Computer Science (Undergraduate)</strong><br> 
+            South Philippine Adventist College, Davao del Sur<br> 
+            June 1995 — March 1997
+          </p>
+        </div>
       </div>
     </div>
 
