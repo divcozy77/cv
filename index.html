@@ -49,7 +49,18 @@
     ul {
       padding-left: 1.2rem;
     }
-
+    .page-section {
+      padding-top: 20mm;  /* top margin */
+      padding-bottom: 20mm; /* footer margin same as top */
+      box-sizing: border-box;
+      page-break-inside: avoid;
+      page-break-after: always;
+    }
+    
+    .page-section:last-child {
+      page-break-after: auto; /* avoid blank page after the last section */
+    }
+    
     #cv-content {
       width: 210mm;
       min-height: 297mm;
@@ -67,7 +78,7 @@
   </style>
 </head>
 <body>
-  <div class="resume-wrapper d-flex" id="cv-content">
+  <div class="resume-wrapper d-flex page-section" id="cv-content">
     <div class="resume-left">
       <h2 class="mb-3">David Jr. Osita</h2>
       <h5 class="mb-4">Senior .NET Developer</h5>
@@ -202,7 +213,7 @@ mapping.<br>
     </div>
   </div>
 
-  <div class="d-flex justify-content-center align-items-center" style="height: 100vh; mb-2 mt-1">
+  <div class="d-flex justify-content-center align-items-center" style="height: 20vh; mb-2 mt-1">
     <button class="btn btn-primary center" onclick="downloadCV()">Download PDF</button>
   </div>
   
