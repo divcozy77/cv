@@ -210,28 +210,27 @@ mapping.<br>
   <script>
     function downloadCV() {
       const element = document.getElementById('cv-content');
-
-      // Create a deep clone of the content (includes all child nodes)
       const clonedElement = element.cloneNode(true);
     
+      // Optional: append to an invisible container so it's part of layout flow
+      const hiddenContainer = document.createElement('div');
+      hiddenContainer.style.position = 'absolute';
+      hiddenContainer.style.left = '-9999px';
+      hiddenContainer.appendChild(clonedElement);
+      document.body.appendChild(hiddenContainer);
+    
       const opt = {
-        margin:       0,
-        filename:     'DavidJR_Osita_CV.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  {
-          scale: 2,
-          useCORS: true,
-          scrollY: 0
-        },
-        jsPDF: {
-          unit: 'mm',
-          format: 'a4',
-          orientation: 'portrait'
-        },
+        margin: 0,
+        filename: 'DavidJR_Osita_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
         pagebreak: { mode: ['css', 'legacy'] }
       };
     
-      html2pdf().set(opt).from(clonedElement).save();
+      html2pdf().set(opt).from(clonedElement).save().then(() => {
+        document.body.removeChild(hiddenContainer); // Clean up
+      });
     }
   </script>
 </body>
