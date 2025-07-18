@@ -11,13 +11,11 @@
       /* font-size: small; */
       background-color: #f8f9fa;
     }
-
-    .resume-wrapper {
-      max-width: 960px;
-      margin: 2rem auto;
-      background: white;
-      display: flex;
-      border: 1px solid #dee2e6;
+    
+    body, html {
+      margin: 0;
+      padding: 0;
+      background: #eee;
     }
 
     .section-title {
@@ -45,34 +43,56 @@
 
     #cv-content {
       width: 210mm;
-      box-sizing: border-box;
-      background: white;
-      font-family: Arial, sans-serif;
+      margin: auto;
+      background: #fff;
     }
 
     .page-section {
       display: flex;
       flex-direction: row;
-      height: 297mm;
+      height: calc(297mm - 40mm); /* 297mm A4 - 2x 20mm padding */
       padding: 20mm;
       box-sizing: border-box;
       page-break-after: always;
-      position: relative;
       overflow: hidden;
       background: white;
     }
 
     .sidebar {
-      width: 50%;
+      width: 40%;
       padding: 5mm;
       background: #1c2b3a;
       color: white;
     }
 
+    .sidebar h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
     .content {
-      width: 50%;
+      margin-left: 10mm;
+      width: 60%;
       color: #000;
-      padding-left: 5mm;
+    }
+
+    .content h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #333;
+      padding-bottom: 4px;
+    }
+
+    .footer-note {
+      position: absolute;
+      bottom: 10mm;
+      right: 20mm;
+      font-size: 12px;
+      color: #999;
+    }
+
+    /* Optional fixed height for visual layout debugging */
+    .sidebar, .content {
+      min-height: 100%;
     }
   
     .content-full {
@@ -80,6 +100,7 @@
       color: #000;
       padding-left: 5mm;
     }
+
     .page-break {
       page-break-before: always;
     }
@@ -113,7 +134,7 @@
        
       <div class="content">
         <div class="mb-4">
-          <h4 class="section-title">Profile</h6>
+          <h4 class="section-title">Profile Summary</h6>
           <p>Dynamic Senior .NET Developer with over 25 years of experience in delivering scalable, 
   enterprise-grade web and mobile applications. <br><br>
   
@@ -159,6 +180,16 @@
           <p><strong>Database Developer at Growth Equity in Mindanao (USAID), Davao City</strong> / April 2009 — March 2011<br>
             - Built MIS platforms for program monitoring and reporting.
           </p>
+        </div>
+
+        <div class="mb-4 mt-5">
+          <h4 class="section-title">Personal Skills</h4>
+          <ul>
+            <li>Creative Problem Solving</li>
+            <li>Team Leadership</li>
+            <li>Agile Methodologies</li>
+            <li>Continuous Learning</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -206,15 +237,6 @@
 
     <div class="page-section">
       <div class="content-full">
-        <div class="mb-4">
-          <h4 class="section-title">Personal Skills</h4>
-          <ul>
-            <li>Creative Problem Solving</li>
-            <li>Team Leadership</li>
-            <li>Agile Methodologies</li>
-            <li>Continuous Learning</li>
-          </ul>
-        </div>
         <div class="mb-4">
           <h4 class="section-title">Education</h4>
           <p><strong>Diploma of Applied Science in Information Technology</strong><br> 
